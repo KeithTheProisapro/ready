@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>New Tab</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+	<script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+	<link rel='icon' href='https://i.pinimg.com/originals/15/6a/86/156a86c143634a2e444b673a7b373b46.jpg
+' sizes='32x32'>
+	<style>
+		body{
+			background-image: url("https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/sunset-quotes-21-1586531574.jpg?crop=1.00xw:0.752xh;0,0.0601xh&resize=980:*");
+			background-size: cover; 
+		}
+		#diver{
+		text-align: center;
+		rgba:255,255,255.0.5;
+		}
+		#vf{
+			width: 300px;
+			height:40px;
+		}
+		button{
+			width:40px;
+			height:40px;
+			}
+		#lister>li{
+			font-family: 'Roboto', sans-serif;
+			background-color: #7fffd4;
+			font-weight: bold;
+			padding: 10px 20px;
+			margin: 10px auto;
+			border-radius: 211px;
+			width: 500px
+		}
+		#listheading{
+			font-family: 'Roboto', sans-serif;
+			text-align: center;
+			text-decoration-color: aquamarine;
+			color: white;
+
+
+		}
+		#useful{
+			font-family: 'Roboto', sans-serif;
+			text-align: left;
+			text-decoration-color: aquamarine;
+			color: aquamarine;
+		}
+		#links{
+			text-align: left;
+			padding: 10px 20px;
+			margin: 10px 20px;
+			border-radius: 211px;
+			width: 500px
+			
+		}
+
+		
+
+		#plsmeme>li{
+			float: none;
+			background-color: none;
+			width: 7%;
+		}
+		#plsmeme>li>a:hover{
+			color: yellow;
+			
+		}
+		#plsmeme>li{
+			transition: 0.2s
+		}
+		img{
+
+		}
+	</style>
+<body>
+	<h1 id="useful">Useful Links</h1>
+	<div id="links">
+	<img id="classroom" width="40" src="https://img.icons8.com/color/48/000000/google-classroom.png" alt="Google classroom">
+	<img id="Onenote" width="40" src="https://img.icons8.com/color/48/000000/microsoft-onenote-2019.png" alt="Onenote">	
+	<img  id="eclass" width="40" src="https://img.icons8.com/dusk/64/000000/google-news.png" alt="Eclass2.0">
+	<img  id="google" width="40" src="https://img.icons8.com/color/48/000000/google-logo.png" alt="Eclass2.0">
+	</div>
+	<div id="diver">
+		<h1 id="listheading">My to do list</h1>
+		<input type="text" id="vf" name="textboxx" id="dac">
+		<button id="addtask">+</button>
+		<ul id="lister" style="list-style-type:none;">
+		
+		</ul>
+	</div>
+	<script>
+		$(document).ready(function(){
+			$("#dac").prop("placeholder","Enter your task here!:)")
+		})
+		$('#classroom').click(function(){
+   window.location.href='https://classroom.google.com';
+})
+				$('#Onenote').click(function(){
+   window.location.href='https://www.onenote.com/';
+})
+				$('#eclass').click(function(){
+   window.location.href='https://news.google.com/';
+})
+				$('#google').click(function(){
+   window.location.href='https://google.com';
+})
+		$("#addtask").click(function(){
+			var tf = $("input[name='textboxx']").val()
+			
+			
+			if (tf=="") {
+				alert("Please enter a task")
+			}
+			else{
+				$("ul").append("<li><input type='checkbox'>"+tf+"</li>");
+				$("#vf").val("");
+			}
+
+		})
+		// $("input[type='checkbox']").click(function(){
+		// 	$(this).parent()
+		// })
+		$(document).on('click','input[type="checkbox"]',function(){
+			$(this).parent().hide(2000)
+		})
+	</script>
+</body>
+</html>
